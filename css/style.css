@@ -1,0 +1,419 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lora', serif;
+    color: #555;
+    background: #fff;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ---------- ШАПКА ---------- */
+.header {
+    height: 100px;
+    padding: 0 116px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    border-bottom: 2px solid #69724F;
+}
+
+.logo {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    display: block;
+}
+
+.nav {
+    display: flex;
+    gap: 60px;
+    margin-left: 100px;
+}
+
+.nav a {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #444;
+}
+
+.donate {
+    width: 180px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #69724F;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ---------- ГОЛОВНИЙ ЕКРАН ---------- */
+.hero-image {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.hero-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+.hero {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    min-height: 600px;
+    border-bottom: 2px solid #69724F;
+}
+
+.hero-left,
+.hero-right {
+    z-index: 1;
+}
+
+.hero-left {
+    position: absolute;
+    left: 116px;
+    top: 80px;
+    width: 300px;
+    text-align: center;
+}
+
+.hero-left h3 {
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1.4;
+    color: #555;
+}
+
+.hero-left h1 {
+    margin-top: 70px;
+    font-size: 54px;
+    font-weight: 600;
+    line-height: 1.4;
+    text-transform: uppercase;
+    color: #555;
+}
+
+.hero-right {
+    position: absolute;
+    left: 500px;
+    right: 0;
+    top: 70px;
+}
+
+.hero-right h2 {
+    height: 90px;
+    padding-left: 40px;
+    display: flex;
+    align-items: center;
+    background: #66704a;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+}
+
+.hero-text {
+    width: 990px;
+    max-width: 90%;
+    margin-top: 25px;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.hero-text hr {
+    width: 200px;
+    margin: 30px auto;
+    border: none;
+    border-top: 1px solid #66704a;
+}
+
+/* ---------- ВИ МОЖЕТЕ ДОПОМОГТИ ---------- */
+.help {
+    padding: 60px 116px 80px;
+}
+
+.help>h2 {
+    text-align: center;
+    font-size: 34px;
+    font-weight: 700;
+    color: #111;
+}
+
+.help>hr {
+    width: 200px;
+    margin: 25px auto 60px;
+    border: none;
+    border-top: 1px solid #999;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 56px;
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.card h3 {
+    margin: 25px 0 20px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    color: #111;
+}
+
+.card p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #111;
+}
+
+
+.conteiner1 {
+    width: min(100%, 1600px);
+    margin: 0 auto;
+    padding: 10px 0 40px;
+}
+
+.page-title {
+    margin: 0 0 24px;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.donation-banner {
+    position: relative;
+    width: 100%;
+    height: 408px;
+    overflow: hidden;
+    background: #dedede;
+}
+
+.donation-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.banner-content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.25);
+}
+
+.banner-content h2 {
+    margin: 0;
+    color: #fff;
+    text-align: center;
+    font-size: clamp(1.3rem, 3vw, 2.2rem);
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+.donation-form {
+    width: min(100%, 380px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+}
+
+.donation-form input,
+.donation-form button {
+    width: 100%;
+    min-height: 48px;
+    padding: 12px 16px;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    font: inherit;
+}
+
+.donation-form input {
+    font-size: 1.05rem;
+}
+
+.donation-form button {
+    border: 0;
+    background: #1d5b3c;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.donation-form button:hover {
+    background: #1d5b3c;
+}
+
+
+
+
+.help-image {
+    display: block;
+    width: 1400px;
+    height: 700px;
+    object-fit: cover;
+    object-position: center;
+    margin: 0 auto;
+    gap: 50px;
+}
+
+
+
+
+body {
+    margin: 0;
+    font-family: Georgia, serif;
+    background: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background: #6b7a4b;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+.conteiner1 header {
+    margin-top: 46px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 22px;
+}
+
+main {
+    width: 900px;
+    margin: 30px auto;
+    flex: 1;
+}
+
+.animals {
+    width: min(1100px, calc(100% - 48px));
+}
+
+.animal {
+    display: flex;
+    align-items: stretch;
+    gap: 28px;
+    margin-bottom: 28px;
+}
+
+.animal img {
+    flex: 0 0 36%;
+    width: 36%;
+    min-height: 240px;
+    object-fit: cover;
+}
+
+.text-box {
+    flex: 1;
+    min-width: 0;
+    border: 1px solid #b5ad8a;
+    padding: 20px;
+}
+
+.text-box h2 {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+}
+
+.text-box p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.6;
+    color: #666;
+}
+
+.share {
+    border-top: 3px solid #ccc;
+    padding: 50px 0;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.share-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #b5ad8a;
+    padding: 12px 30px;
+    text-decoration: none;
+    color: black;
+    font-size: 13px;
+}
+
+.share-btn svg {
+    width: 22px;
+    height: 22px;
+}
+
+footer {
+    background: #6b7a4b;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    font-size: 16px;
+}
+
+footer p {
+    margin: 0;
+}
+
+@media (max-width: 700px) {
+    .animals {
+        width: calc(100% - 32px);
+    }
+
+    .animal {
+        flex-direction: column;
+        gap: 16px;
+        margin-bottom: 24px;
+    }
+
+    .animal img {
+        flex: none;
+        width: 100%;
+        height: 240px;
+    }
+}
